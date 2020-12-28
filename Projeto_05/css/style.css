@@ -141,7 +141,7 @@ section.vei-dest{
     padding: 90px 2%;
 }
 
-section.vei-dest h2{
+section.vei-dest .line-title h2{
     display: inline-block;
     position: relative;
     padding: 0 30px;
@@ -152,8 +152,13 @@ section.vei-dest h2{
     background-color: white;
 }
 
+section.vei-dest .container{
+    max-width: 1000px;
+    padding: 40px 0;
+}
+
 .line-title{
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     position: relative;
     text-align: center;
@@ -161,14 +166,62 @@ section.vei-dest h2{
 }
 
 .ln1{
-    width: 100%;
+    width: 96%;
     height: 2px;
     position: absolute;
     margin-top: 15px;
     background-color: black;
 }
 
+/* vit-dest */
 
+header.info-car{
+    margin-top: -70px;
+}
+
+.vit-dest{
+    float: left;
+    width: 33.3%;
+}
+
+.vit-dest .car-img{
+    width: 100%;
+    padding-top: 100%;
+    border: 8px solid white;
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
+}
+
+.vit-dest h2{
+    padding-left: 8px;
+    color: black;
+    font-style: italic;
+    font-size: 30px;
+}
+
+.vit-dest p{
+    padding-top: 4px;
+    padding-left: 8px;
+    color: #424242;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.vit-dest a{
+    display: block;
+    width: 153px;
+    margin-left: 8px;
+    margin-top: 4px;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 40px;
+    background-color: #EB2D2D;
+}
 
 /* media */
 
@@ -193,15 +246,35 @@ section.vei-dest h2{
 }
 
 @media screen and (max-width: 725px){
-
+    
     nav.desktop{
         display: none;
     }
-
+    
     nav.mobile{
         display: block;
     }
     
+}
+
+@media screen and (max-width: 670px){
+
+    section.vei-dest .container{
+        text-align: center;
+    }
+
+    .vit-dest{
+        display: inline-block;
+        float: none;
+        width: 80%;
+        margin-bottom: 100px;
+    }
+
+    .vit-dest a{
+        display: inline-block;
+        line-height: 45px;
+    }
+
 }
 
 @media screen and (max-width: 580px){
@@ -229,6 +302,19 @@ section.vei-dest h2{
     .text-banner .text-banner-single:nth-of-type(3){
         width: 205px;
         margin-left: -24px;
+    }
+
+    section.vei-dest .line-title h2{
+        font-size: 23px;
+        padding: 0 23px;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+
+    .vit-dest{
+        width: 100%;
     }
 
 }
