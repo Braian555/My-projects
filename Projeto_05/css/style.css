@@ -125,9 +125,10 @@ section.banner{
 
 .text-banner .text-banner-single:nth-of-type(4){
     width: 400px;
-    height: 52px;
+    height: 67px;
     position: relative;
     left: -36px;
+    padding: 15px 29px;
     color: black;
     font-size: 25px;
     letter-spacing: 5px;
