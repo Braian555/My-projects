@@ -207,29 +207,126 @@ header.info-car{
     font-style: italic;
 }
 
-.vit-dest a{
+.btn1{
     display: block;
+    font-size: 20px;
+    font-style: italic;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    letter-spacing: 1px;
+    color: white;
+    border-radius: 20px;
+    background-color: #EB2D2D;
     width: 153px;
+}
+
+.vit-dest a{
     margin-left: 8px;
     margin-top: 4px;
-    border-radius: 20px;
+}
+
+/* serv-desc */
+
+section.serv-desc{
+    display: flex;
+}
+
+.half-1{
+    width: 50%;
+    padding: 90px 2%;
+    text-align: right;
     color: white;
-    text-decoration: none;
-    text-align: center;
+    background-color: #242424;
+}
+
+.half-1-wraper{
+    padding-right: 100px;
+    display: inline-block;
+    text-align: left;
+}
+
+.half-1-wraper h2{
+    font-size: 30px;
     font-style: italic;
+    font-weight: normal;
+}
+
+.half-1-wraper ul{
+    float: left;
+    margin-top: 10px;
+}
+
+.half-1-wraper li{
+    margin-left: 15px;
     font-size: 20px;
-    letter-spacing: 1px;
-    line-height: 40px;
+}
+
+.half-1-wraper a{
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 20px;
+    margin-top: 40%;
+}
+
+.half-2{
+    width: 50%;
+    padding: 90px 10%;
+    color: white;
     background-color: #EB2D2D;
 }
 
+.half-2 h2{
+    font-size: 30px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.half-2 .depoi-single{
+    margin-top: 19px;
+}
+
+.depoi-single p{
+    font-size: 20px;
+}
+
+.nav-1{
+    float: left;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 30px;
+}
+
+.nav-1 img{
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.arrows{
+    float: left;
+}
+
+.name-depoi{
+    float: left;
+    font-size: 23px;
+    color: #292929;
+}
+
 /* media */
+
+@media screen and (max-width: 2560px){
+
+    .half-1-wraper a{
+        margin-top: 40%;
+    }
+
+}
 
 @media screen and (max-width: 1400px){
 
     section.banner{
         background-size: 90% auto;
-        background-position: 200% 100%;
+        background-position: 200% 50%;
     }
 
 }
@@ -241,6 +338,27 @@ header.info-car{
         background-position: center;
         height: 70vw;
         min-height: 500px;
+    }
+}
+
+@media screen and (max-width: 840px){
+
+    section.serv-desc{
+        flex-direction: column;
+    }
+
+    .half-1{
+        text-align: left;
+        padding: 80px 100px;
+    }
+
+    .half-1,.half-2{
+        width: 100%;
+    }
+
+    .half-1-wraper a{
+        display: block;
+        margin-top: 84%;
     }
 
 }
@@ -309,12 +427,32 @@ header.info-car{
         padding: 0 23px;
     }
 
+    .half-1{
+        width: 100%;
+    }
+
+    .half-1-wraper a{
+        margin-top: 150%;
+    }
+
 }
 
 @media screen and (max-width: 480px){
 
     .vit-dest{
         width: 100%;
+    }
+
+    .half-1-wraper a{
+        margin-top: 150%;
+    }
+
+}
+
+@media screen and (max-width: 241px){
+
+    .half-1-wraper a{
+        margin-top: 150%;
     }
 
 }
