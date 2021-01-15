@@ -1,6 +1,8 @@
 /* Styles gerais */
 
-*{
+*,
+*:before,
+*:after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -343,12 +345,12 @@ section.serv-desc{
 /* contact */
 
 section.contact{
-    padding: 80px 2%;
+    padding: 80px 2% 0 2%;
 }
 
 section.contact form{
     max-width: 600px;
-    margin: 50px auto;
+    margin: 0px auto;
     font-style: italic;
 }
 
@@ -360,17 +362,19 @@ section.contact .input-wraper{
 
 section.contact input[type=text]{
     width: 100%;
-    height: 40px;
+    height: 50px;
     line-height: 40px;
     padding-left: 15px;
+    font-size: 16px;
     font-style: italic;
     border: 1px solid #ccc;
 }
 
 section.contact textarea{
     width: 100%;
-    height: 120px;
+    height: 130px;
     padding: 8px;
+    font-size: 16px;
     font-style: italic;
     border: 1px solid #ccc;
     resize: none;
@@ -405,6 +409,7 @@ section.contact input[type=submit]{
 
 footer{
     padding: 20px 2%;
+    margin-top: 10px;
     background-color: #252525;
 }
 
@@ -453,7 +458,7 @@ section.venda{
 }
 
 .search-1{
-    width: 300px;
+    width: 90%;
 }
 
 .search-1 h2{
@@ -463,34 +468,35 @@ section.venda{
 }
 
 .search-1 .price-bar{
+    position: relative;
     width: 100%;
     height: 20px;
     margin-top: 8px;
     border: 1px solid #a5a5a5;
     border-radius: 20px;
-    position: relative;
     background-color: #ffffff;
 }
 
 .bar-price-fill{
+    position: absolute;
     width: 30%;
     height: 20px;
     left: 0;
     top: 0;
-    position: absolute;
     border-radius: 20px;
-    background-color: #b6b6b6;
+    background-image: linear-gradient(to bottom, #ffff, #c9c9c9);
 }
 
 .pointer-bar{
+    position: absolute;
     width: 26px;
     height: 26px;
-    position: absolute;
     left: calc(30% - 13px);
     top: -3px;
     border-radius: 50%;
-    border: 1px solid #000000;
-    background-color: #bebebe;
+    border: 1px solid #535353;
+    box-shadow: 0px 2px #93939363;
+    background-image: linear-gradient(to bottom, #ffff, #b1b1b1);
     cursor: pointer;
 }
 
@@ -511,8 +517,8 @@ section.venda{
 }
 
 .search-2 h2{
-    font-size: 24px;
     color: #000000;
+    font-size: 24px;
     font-weight: normal;
 }
 
@@ -528,16 +534,208 @@ section.venda{
     display: inline-block;
     width: 20px;
     height: 20px;
+    position: relative;
     border: 1px solid #ccc;
     border-radius: 20px;
     vertical-align: top;
     cursor: pointer;
 }
 
+.form-sell-wraper input[type=checkbox]:checked + label > .circle{
+    display: block;
+}
+
+.circle{
+    display: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    background: black;
+    position: absolute;
+    left: 6px;
+    top: 6px;
+}
+
 .form-sell-wraper span{
     display: inline-block;
     padding: 0 10px;
     vertical-align: top;
+}
+
+.swcase-sell{
+    width: 70%;
+    float: left;
+}
+
+.swcase-sell .vit-dest{
+    margin-top: 10%;
+}
+
+/* sell-indiv */
+
+section.sell-indiv{
+    padding: 80px 2% 0 2%;
+}
+
+section.sell-indiv .container{
+    padding: 40px 0 0 0;
+    text-align: center;
+    max-width: 1280px;
+}
+
+.info-veicle{
+    display: inline-block;
+    width: 60%;
+}
+
+.photo-dest{
+    width: 100%;
+    padding-top: 57%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.veicle-descrition{
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    padding: 60px 20px;
+}
+
+.veicle-descrition p{
+    max-width: 300px;
+    margin-top: 25px;
+    font-size: 17px;
+}
+
+.veicle-descrition a{
+    margin-top: 25px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-galeri-parent{
+    width: 100%;
+    padding: 36px;
+    position: relative;
+}
+
+.arrow-left-nav{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: rotateY(-50%);
+    background-image: url('../images/arrow-left.png');
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.arrow-right-nav{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: rotateY(-50%);
+    background-image: url('../images/arrow-right.png');
+    background-size: 100% 100%;
+    cursor: pointer;
+}
+
+.nav-galeri{
+    width: 100%;
+    overflow: hidden;
+}
+
+.nav-galeri-wraper{
+    width: 200%;
+}
+
+.mini-img-wraper{
+    float: left;
+    padding: 8px;
+    width: calc(33.3% * (100 / 200));
+}
+
+.mini-img{
+    width: 100%;
+    cursor: pointer;
+    padding-top: 70%;
+    background-size: cover;
+    background-position: center;
+}
+
+.info-bread{
+    text-align: left;
+    padding: 20px 0;
+}
+
+.info-bread a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.info-bread a:last-child{
+    color: #ff0000;
+}
+
+.info-bread span{
+    padding: 0 30px;
+}
+
+/* Sobre */
+
+.sobre{
+    min-height: 90%;
+    padding: 70px 0 20px 2%;
+}
+
+section.sobre .container{
+    max-width: 840px;
+    margin-top: 30px;
+}
+
+section.sobre .img-dest-sobre{
+    width: 100%;
+    padding-top: 60%;
+    background-color: #b1b1b1;
+}
+
+section.sobre .descricao-autor{
+    margin-top: 20px;
+}
+ 
+.descricao-autor h2{
+    font-size: 24px;
+}
+
+.descricao-autor p{
+    margin-top: 10px;
+    line-height: 28px;
+    font-size: 16px;
+}
+
+.descricao-autor-2{
+    margin-top: 40px;
+}
+
+.descricao-autor-2 p{
+    float: right;
+    width: 70%;
+    margin-top: -5px;
+    line-height: 28px;
+}
+
+.img-small{
+    float: left;
+    width: 20%;
+    padding-top: 20%;
+    background-color: #b1b1b1;
 }
 
 /* media */
@@ -595,6 +793,7 @@ section.venda{
     
     footer{
         text-align: center;
+        background-color: #252525;
     }
 
     footer nav{
@@ -605,6 +804,43 @@ section.venda{
         float: none;
     }
 
+    .search-1{
+        display: inline-block;
+    }
+
+    .search-2{
+        display: inline-block;
+        text-align: left;
+    }
+
+    .sidebar{
+        width: 100%;
+        text-align: center;
+    }
+
+    .swcase-sell{
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        padding-bottom: 10%;
+    }
+    
+    .info-veicle{
+        width: 100%;
+    }
+
+    .veicle-descrition{
+        padding: 20px 0;
+        text-align: center;
+    }
+    .veicle-descrition p{
+        max-width: none;
+    }
+    
+    .veicle-descrition a{
+        display: inline-block;
+    }
+      
 }
 
 @media screen and (max-width: 725px){
@@ -616,7 +852,17 @@ section.venda{
     nav.mobile{
         display: block;
     }
-    
+
+    .img-small{
+        width: 100%;
+        padding-top: 100%;
+    }
+
+    .descricao-autor-2 p{
+        width: 100%;
+        padding: 20px 0;
+    }
+
 }
 
 @media screen and (max-width: 670px){
