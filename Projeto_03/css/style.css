@@ -328,18 +328,20 @@ section.plataforms-4{
     padding-left: 13px;
 }
 
-.map-wraper2{
-	margin-top: 10px;
-	max-width: 480px;
-	top: 0;
-	left: 0;
-	padding-top: 100%;
-}
-
 .map-wraper3{
 	width: 100%;
 	max-width: 480px;
 	position: relative;
+	border: 5px solid #cccccc;
+	margin-top: 5px;
+}
+
+.map-wraper2{
+	max-width: 480px;
+	top: 0;
+	left: 0;
+	padding-top: 100%;
+	background-color: #dddddd;
 }
 
 .map-wraper h2{
@@ -347,16 +349,6 @@ section.plataforms-4{
     font-size: 23px;
     font-weight: 300;
     max-width: 157px;
-}
-
-.map{
-	left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-image: linear-gradient(to bottom right, #151565, #1101ff, #6967f1, #bbcaff);
-	border: 5px solid #cccccc;
 }
 
 /*footer*/
